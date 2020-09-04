@@ -1,3 +1,5 @@
+package calcproject;
+
 import java.lang.*;
 
 public class Calculator {
