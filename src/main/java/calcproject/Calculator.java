@@ -55,7 +55,7 @@ public class Calculator {
 
     public static String clear(String userInput){
         //logic should keep the previous number until calc hits clear.
-        userInput= "clear";
+        userInput = "clear";
         start = 0;
         System.out.println("Current Number: "+start);
         return String.valueOf(0);
@@ -126,7 +126,7 @@ public class Calculator {
 
         System.out.println("Current Number: "+start);
 
-        //System.out.println(exponent(4,2));
+        System.out.println(exponent(4,2));
 
 
         //System.out.println(exponent(4,2));
