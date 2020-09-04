@@ -128,6 +128,7 @@ public class Calculator {
 
         System.out.println(exponent(4,2));
 
+        System.out.println("Current Number: "+start);
 
         //System.out.println(exponent(4,2));
 
