@@ -1,181 +1,212 @@
-import java.util.Arrays;
+//Question 5
+public class Main{
+    public static Integer countTriple(String input) {
 
-public class Main {
-    public static void main(String[] args) {
-        // Do Not Type Above This Line!
-
-        //Question 1:
-        //a = b3 - 6
-        //if b=3, then a =_?
-/*
-        int b = 3, c = 6, d = 3;
-        int a = (b * d) - c;
-        String questionOne = ("(3 * 3) - 6 = " + a);
-        System.out.println("Question 1 Answer:");
-        System.out.println(questionOne);
-*/
-        //Question 2:
-        //q = 2j + 20
-        //if j=5, then q =_?
-/*
-        int j = 5;
-        int q = (2 * j) + 20;
-        String questionTwo = ("(2 * 5) + 20 = " + q);
-        System.out.println("Question 2 Answer:");
-        System.out.println(questionTwo);
-*/
-        //Question 3:
-        //g = e2 + 21 - f5
-        //e=7, f=4
-/*
-        int e = 7, f = 4;
-        int g = (e * 2) +21 -(f *5);
-        String questionThree = ("(7 * 2) + 21 - (4 * 5) = " + g);
-        System.out.println("Question 3 Answer:");
-        System.out.println(questionThree);
-*/
-        //Question 4:
-        //w = z0.4 - h + i7
-        //z=23, h=13.4, i=0.65
-
-        double z = 2;
-        double h = 13.4, i = 0.65;
-        double w = (z * 0.4) - 13.4 + (i * 7);
-        String questionFour = ("(23 * 0.4) -13.4 +(-0.65 * 7) = " + w);
-        System.out.println("Question 4 Answer: \n" + questionFour);
-
-        System.out.println("\n");
-
-        //Question 5:
-        //f(y)=5y+y'3-7
-        //y(2)=?
-
-        double y = 2;
-        double resultY = y * 2;
-        double resultB = (5 * y) + Math.pow(y,3) - 7;
-        System.out.println(resultY);
-        System.out.println(resultB);
-
-
-        int f = 7, g = 7;
-        String areTheSame = ("\nf and g are the same");
-        if (f > g) {
-            System.out.println(f);
-        }
-        else if (f == g) {
-            System.out.println(areTheSame);
-        }
-        else
-            System.out.println(g);
-
-        double radius = 10;
-        double circumference = 2 * radius * Math.PI;
-        double circumferenceRounded = Math.round(circumference*100.00)/100.00;
-        System.out.println("\nCircumference of Circle When Radius equals " + radius + " circumference = " + circumferenceRounded);
-
-        System.out.println("\n");
-
-        String word = "Hello";
-        System.out.println(word.charAt(0));
-        //used to get the last element in the string
-        System.out.println(word.charAt(word.length()-1));
-
-        //SubString Method
-        String biggie = "Christopher";
-
-        System.out.println(biggie.substring(8,11).toUpperCase());
-        System.out.println(biggie.substring(4,8));
-
-        System.out.println("\n");
-
-        String[] listOfNames = {"Darren Salgado","Immanuel","David Adenaike","Yasmin Herrera"};
-        String lastNameOnList = listOfNames[listOfNames.length-1];
-        System.out.println(listOfNames.length);
-        System.out.println(listOfNames[0]);
-        System.out.println(listOfNames[1]);
-        System.out.println(listOfNames[2]);
-        System.out.println(listOfNames[3]);
-        System.out.println(listOfNames[4]);
-        System.out.println(lastNameOnList);
-        System.out.println("\n");
-        listOfNames[3] = "Roy";
-        System.out.println(listOfNames[3]);
-        //System.out.println(Arrays.toString(listOfNames));
-        int[] listOfNumbers = {12, 3, 89, 5, 10, 1, 32};
-        int firstResult = listOfNumbers[0] + listOfNumbers[6];
-        int secondResult = listOfNumbers[1] * listOfNumbers[3];
-        //int thirdResult = listOfNumbers[5] = 44;
-        listOfNumbers[5] = 44;//assigning a new value to the array index [5].
-        System.out.println("\n"+firstResult);
-        System.out.println(secondResult);
-        System.out.println(listOfNumbers[5]);
-
-        int partyAge = 17;
-        if (partyAge >= 18){
-            System.out.println("\nWelcome to the party!");
-        }
-        else
-            System.out.println("\nYou're Under Age!");
-
-        partyAge = 18;
-
-        int k;
-        for(k = 0; k <= 4; k++){
-
-            switch(k){
-                case 0:
-                    System.out.println(listOfNames[0]);
-                    break;
-                case 1:
-                    System.out.println(listOfNames[1]);
-                    break;
-                case 2:
-                    System.out.println(listOfNames[2]);
-                    break;
-                case 3:
-                    System.out.println(listOfNames[3]);
-                    break;
-                case 4:
-                    System.out.println(listOfNames[4]);
-                    break;
-                default:
-                    System.out.println("There are no names on this list.");
-                    break;
+        int trippleCount = 0;
+        for (int i = 0; i < input.length()-1; i++){
+            if (input.charAt(i) == input.charAt(i+1) && input.charAt(i+1) == input.charAt(i+2)){
+                trippleCount++;
             }
         }
+        return trippleCount;
+    }
 
-
-        switch(partyAge){
-            case 18:
-                System.out.println("\nWelcome to the party!");
-                break;
-            default:
-                System.out.println("\nYou're Under Age!");
-                break;
-        }
-
-
-//        //(a + b) = (c * d)
-//        int a = 3, b = 6, c = 3, d = 3;
-//        int answerA = (a+b);
-//        int answerL = (c*d);
-//        if (answerA == answerL){
-//            System.out.println("\nProblem Solved!");
-//        }
-//
-//        int o;
-//        for (o = 0; o < 64; o++) {
-//
-//            System.out.println(o);
-//        }
-
-
-        // Do Not Type Below This Line!
-
-
-        }
-
-
-
+    public static void main(String[] args) {
+        System.out.println(countTriple("abcXXXabc"));
+        System.out.println(countTriple("xxxabyyyycd"));
+        System.out.println(countTriple("a"));
+    }
 }
+//Question 4
+//public class Main{
+//
+//    public static boolean gIsHappy(String input) {
+//
+//        boolean happyG = false;
+//        for (int i = 0; i < input.length(); i++) {
+//            if (input.charAt(i) == 'g') {
+//                if (i <= input.length() -2) {
+//                    if (input.charAt(i +1) == 'g') {
+//                        happyG = true;
+//                    } else if (i > 0) {
+//                        if (input.charAt(i -1) == 'g') {
+//                            happyG = true;
+//                        }else return false;
+//                    }else return false;
+//                }
+//            }
+//        }
+//        return happyG;
+//    }
+//    public static void main(String[] args) {
+//
+//        System.out.println(gIsHappy("xxggyygxx"));
+//        System.out.println(gIsHappy("xxgxx"));
+//        System.out.println(gIsHappy("xxggxx"));
+//    }
+//}
+
+//Question 3
+//public class Main {
+//
+//    public static boolean containsEqualNumberOfIsAndNot(String input) {
+//
+//        int isCounter = 0;
+//        int notCounter = 0;
+//        boolean answer;
+//        for (int index = 0; index < input.length(); index++) {
+//            if (input.charAt(index) == 'i' && input.charAt(index + 1) == 's') {
+//                isCounter++;
+//            } else if (input.charAt(index) == 'n' && input.charAt(index + 1) == 'o' && input.charAt(index + 2) == 't') {
+//                notCounter++;
+//            }
+//            if (notCounter == isCounter) {
+//                answer = true;
+//            }
+//        }return (isCounter == notCounter);
+//    }
+//        public static void main (String[]args){
+//            System.out.println(containsEqualNumberOfIsAndNot("is not equal"));
+//            System.out.println(containsEqualNumberOfIsAndNot("is notnot"));
+//        }
+//}
+
+//Question 2
+//public class Main {
+//    public static String removeString(String base, String remove) {
+//        String answer = base;
+//        if(base.contains(remove)) {
+//            answer = base.replace("o", "");
+//        }
+//        return answer;
+//    }
+//    public static void main(String[] args) {
+//        String Hello = "How are you today";
+//        System.out.println(removeString(Hello,"o"));
+//    }
+//}
+
+//Question 1
+//public class Main {
+//
+//    public static Integer countYZ(String str) {
+//        int count = 0;
+//        String temp[] = str.split(" ");
+//        for (int i = 0; i < temp.length; i++) {
+//            if (temp[i].trim().endsWith("y") || temp[i].trim().endsWith("z"))
+//                count++;
+//        }
+//        return count;
+//    }
+//
+//    public static void main(String[] args){
+//        String asshole = "Hello my name is zebra and my belly is big";
+//        System.out.println(countYZ(asshole));
+//    }
+//}
+
+//public class Main {
+//
+//    public static String createStringOfFibonnaciUpToMax(int maxnumber) {
+//        //Type your code here
+//        StringBuilder str = new StringBuilder("0,");
+//        //str.append(0).append(",");
+//        int num1 = 0, num2 = 1;
+//        int sumOfPrevTwoNums = 0;
+//        for(int i = 1; sumOfPrevTwoNums <= maxnumber; i++){
+//            //System.out.print(num1+",");
+//            sumOfPrevTwoNums = num1 + num2;
+//            num1 = num2;
+//            num2 = sumOfPrevTwoNums;
+//            str.append(num1).append(",");
+//        }
+//        //System.out.println("test");
+//        str.deleteCharAt(str.length()-1);
+//        return str.toString();//String.valueOf(maxnumber);
+//    }
+//
+//    // DO NOT TYPE BELOW HERE!!!
+//    public static void main(String[] args){
+//        createStringOfFibonnaciUpToMax(9);
+//        System.out.println(createStringOfFibonnaciUpToMax(9));
+//    }
+//}
+//Question Replace WuTang Two Three Divisible
+//import java.util.Arrays;
+//public class Main {
+//
+//    public static String replaceWuTangTwoThreeDivisible(String stringInput) {
+//        //Type your code here
+//        //Create a string array
+//        //S2 : use split method
+//        //S3 : loop through
+//        //S4 : setup if statments one for wu and one for tang.
+//        //S5 : create new string for final output
+//        //S6 : initialize new string for final answer .
+//        //S7 : cut out trash.
+//
+//        //String[] wuTang;
+//        String[] wuTang = stringInput.split(" ");
+//        for (int i = 0; i < wuTang.length; i++){
+//            if ((i+1) % 2 == 0){
+//                wuTang[i] = "Wu";
+//            }else if ((i+1)% 3 == 0){
+//                wuTang[i] = "Tang";
+//            }
+//        }
+//        String su = Arrays.toString(wuTang).replace("[", "").replace("]", "").replace(",", "");
+//        return su;
+//    }
+//
+//    // DO NOT TYPE BELOW HERE!!!
+//    public static void main(String[] args){
+//        replaceWuTangTwoThreeDivisible("The small brown dog hopped the fence");
+//        System.out.println(replaceWuTangTwoThreeDivisible("The small brown dog hopped the fence"));
+//    }
+//
+//}
+
+
+
+//public class Main{
+//
+//    public static int printLargest(int[] ar) {
+//
+//        int largest = ar[0];
+//
+//        for(int i = 0; i <= 5; i++){
+//            if (ar[i] > largest) largest = ar[i];
+//        }System.out.println("This is the largest number in the array: "+largest);
+//        return largest;
+//    }
+//
+//    public static void main(String[] args){
+//        int[] numArr = {100,10,787,74,614,21};
+//        printLargest(numArr);
+//    }
+//}
+
+
+//public class Main{
+//
+//    public static String printOddNumbersInRange(int start, int end){
+//        String result = "";
+//        //DO NOT TYPE BELOW HERE
+//        //Type your code here
+//        start = 19;
+//        while(start >= 3){
+//
+//            if (start % 2 != 3){
+//                System.out.print(start);
+//                start-=2;
+//            }
+//        }
+//        return result;
+//    }
+//
+//    //Don't touch below here
+//    public static void main(String[] args){
+//        printOddNumbersInRange(15,3);
+//    }
+//}
 

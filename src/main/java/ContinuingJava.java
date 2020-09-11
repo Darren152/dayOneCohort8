@@ -74,7 +74,7 @@ public class ContinuingJava{
         String[] color = {"Red","Blue","Green","Orange","Yellow"};
 
         int k;
-        for(k = 0; k <= 4; k++){
+        for(k = 0; k <= 3; k++){
 
             switch (k) {
                 case 0 -> System.out.println(color[0]);

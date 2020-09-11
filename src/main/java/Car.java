@@ -1,18 +1,8 @@
 import java.util.Scanner;
-import java.time.LocalDate;
 
 public class Car {
     private static int totalModelSInventory;
     private static int totalModel3Inventory;
-
-    /*
-    private StringFormatter stringFormatter;
-
-    public StringFormatter getStringFormatter() {
-        System.out.println("I am inside StringFormatter");
-        return stringFormatter;
-    }
-    */
 
     String color;
     String type;
@@ -26,18 +16,20 @@ public class Car {
         inventory = numOfCars;
     }
 
-    public int getModel3Inventory(int i){
+    public static int getTotalModel3Inventory(int i){
         //this.totalInventory = totalInventory;
         //inventory += Car.totalModel3Inventory;
+        int inventory =0;
         totalModel3Inventory += inventory;
-        return i;
+        return totalModel3Inventory;
     }
 
-    public int getModelSInventory(int i){
+    public static int getTotalModelSInventory(int i){
         //this.totalInventory = totalInventory;
         //inventory += Car.totalModelSInventory;
-        Car.totalModelSInventory += inventory;
-        return i;
+        int inventory =0;
+        totalModelSInventory += inventory;
+        return totalModelSInventory;
     }
 
     // main method is where we create instances!
@@ -75,8 +67,8 @@ public class Car {
         modelS = new Car("White ","Tesla Model S ", 100);
         System.out.println(modelS.color + modelS.type + modelS.inventory);
 
-        String teslaModel3 = "In "+ userMonth +" of "+ userYear +" Tesla had a total inventory of "+ model3.getModel3Inventory(710) +" "+ model3.type;
-        String teslaModelS = "In "+ userMonth +" of "+ userYear +" Tesla had a total inventory of "+ modelS.getModelSInventory(415) +" "+ modelS.type;
+        String teslaModel3 = "In "+ userMonth +" of "+ userYear +" Tesla had a total inventory of "+ getTotalModel3Inventory(710) +" "+ model3.type;
+        String teslaModelS = "In "+ userMonth +" of "+ userYear +" Tesla had a total inventory of "+ getTotalModelSInventory(415) +" "+ modelS.type;
 //        System.out.println(model3.color + model3.type + model3.inventory);
 //        System.out.println(modelS.color + modelS.type + modelS.inventory);
         System.out.println(teslaModel3);

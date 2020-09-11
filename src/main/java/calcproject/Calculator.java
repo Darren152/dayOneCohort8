@@ -4,7 +4,6 @@ import java.lang.*;
 
 public class Calculator {
 
-
     static double start;
 
     public static double add(double input){
@@ -98,27 +97,7 @@ public class Calculator {
 
     public static void main(String[] args) {
 
-        System.out.println(add(4));
 
-        System.out.println(subtract(2));
-
-        System.out.println(multiply(3));
-
-        System.out.println(divide(2));
-
-        System.out.println(divide(0));
-
-        System.out.println(clear("clear"));
-
-        System.out.println(add(5));
-
-        System.out.println(square(start));
-
-        System.out.println(squareRoot(start));
-
-        System.out.println(invert(start));
-
-        System.out.println(clear("clear"));
 
         System.out.println(add(7));
 
@@ -126,11 +105,7 @@ public class Calculator {
 
         System.out.println("Current Number: "+start);
 
-        System.out.println(exponent(4,2));
-
         System.out.println("Current Number: "+start);
-
-        //System.out.println(exponent(4,2));
 
     }
 

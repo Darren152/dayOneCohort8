@@ -14,19 +14,34 @@ public class Assessment {
     }
 
     public static boolean question20() {
-        int p;
-        for (p = 45; p > 0; p--) {
+        int i;
+        for (i = 45; i > 0; i--) {
 
-            if (p % 3 == 0 && p % 5 == 0) {
+            if (i % 3 == 0 && i % 5 == 0) {
                 System.out.println("Year");
                 System.out.println("Up");
                 System.out.println("YearUp");
                 break;
             }
-            System.out.println(p);
+            System.out.println(i);
         }
-
         return true;
+    }
+
+    public static void question21(){
+
+        for(int i = 45; i > 0; i--){
+            System.out.println(i);
+            if(i%3 == 0){
+                System.out.println("Year");
+            }
+            if(i%5 == 0){
+                System.out.println("Up");
+            }
+            else if (i%3 == 0 && i%5 == 0){
+                System.out.println("YearUp");
+            }
+        }
     }
 
     public static double twoParameters(double price, double discount) {
@@ -225,9 +240,8 @@ public class Assessment {
 
         System.out.println(question20());
 
-
-
-
+        question21();
+        
     }
 }
 
