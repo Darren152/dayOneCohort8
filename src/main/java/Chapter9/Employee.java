@@ -1,9 +1,14 @@
 package Chapter9;
 
-public class Employe extends Person{
+public class Employee extends Person{
 
     private String employeeID;
     private String title;
+
+    public Employee(){
+        super("Angie");
+        System.out.println("In employee default constructor");
+    }
 
     public String getEmployeeID() {
         return employeeID;
